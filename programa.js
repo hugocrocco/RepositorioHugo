@@ -1,20 +1,14 @@
-let listaAmigos=[];
+let listaAmigos = [];
 
-do 
-{
-let amigo=prompt("ingrese el nombre de su amigo o amiga");
-if (amigo)
-    {
-        listaAmigos.push(amigo);
+do {
+    let amigo = prompt("Ingrese el nombre de su amigo o amiga:");
+    if (amigo) {
+        listaAmigos.push(amigo); // Agrega el nombre a la lista
     }
-    let opcion=prompt("desea agregar a otro amigo? (si/no)").toLowerCase();
+    var opcion = prompt("¿Desea agregar a otro amigo? (si/no)").toLowerCase();
+} while (opcion === "si");
 
-}
-while (opcion==="si");
-console.log("lista de amigos");
-
-listaAmigos.forEach((amigo), index)=>{console.log(`${index},${amigo}`)};
-
-
-
-
+console.log("Lista de amigos:");
+listaAmigos.forEach((amigo, index) => {
+    console.log(`${index + 1}: ${amigo}`); // Muestra cada amigo con su índice
+});
